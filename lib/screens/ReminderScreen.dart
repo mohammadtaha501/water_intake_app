@@ -39,7 +39,8 @@ class _ReminderScreenState extends State<ReminderScreen> {
       backgroundColor: Color.lerp(Colors.lightBlueAccent, Colors.white, 0.3)!,
       appBar: AppBar(
         backgroundColor: Color.lerp(Colors.lightBlueAccent, Colors.white, 0.3)!,
-        title: Center(child: Text("Reminder")),
+        title: Text("Reminder"),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(10),

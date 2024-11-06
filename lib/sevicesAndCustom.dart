@@ -502,7 +502,8 @@ void showLottieReminder(BuildContext context) {
             SizedBox(height: 20),
             // Message
             Text(
-              'you set your reminder here',
+              'please set your reminder here',
+              textAlign: TextAlign.center,
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ],

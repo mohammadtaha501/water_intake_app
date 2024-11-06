@@ -11,22 +11,15 @@ class TimeScreen extends StatefulWidget {
 
 class _TimeScreenState extends State<TimeScreen> {
   TimeOfDay? selectedTime;
-  Future<void> _scheduleNotification(TimeOfDay time, int noticeID) async {
+  Future<void> _scheduleNotification( int noticeID) async {
     try {
       final tz.TZDateTime now = tz.TZDateTime.now(tz.local);
-      tz.TZDateTime scheduledDate = tz.TZDateTime.local(now.year, now.month, now.day, time.hour, time.minute);
-
-      if (scheduledDate.isBefore(now)) {
-        print("moving to next day");
-        scheduledDate = scheduledDate.add(Duration(days: 1)); // Schedule for the next day
-      }
-      print('Scheduled notification time: ${scheduledDate.toString()}');
       print('sheduling is going to start');
       await NotificationService.flutterLocalNotificationsPlugin.zonedSchedule(
         noticeID,
         'Reminder',
         'This is your reminder!',
-        scheduledDate,
+        tz.TZDateTime.now(tz.local),
         NotificationDetails(
           android: AndroidNotificationDetails(
             'your_channel_id',
@@ -88,7 +81,7 @@ class _TimeScreenState extends State<TimeScreen> {
                   newHour = (newHour + 1) % 24; // Wrap around hour if it exceeds 23
                 }
                 final selectedTime = TimeOfDay(hour: newHour, minute: newMinutes);
-                await _scheduleNotification(selectedTime,1000);
+                await _scheduleNotification(1000);
                 setState(() {});
               },
               child: Text('Add 2 Minutes'),

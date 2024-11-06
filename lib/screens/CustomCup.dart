@@ -21,7 +21,8 @@ class _CustomCupScreenState extends State<CustomCupScreen> {
       backgroundColor: Color.lerp(Colors.lightBlueAccent, Colors.white, 0.3)!,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: Center(child: Text("Custom Cup")),
+        title: Text("Custom Cup"),
+        centerTitle: true,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

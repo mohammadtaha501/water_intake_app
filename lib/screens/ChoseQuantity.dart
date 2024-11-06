@@ -30,9 +30,9 @@ class _QuantityScreenState extends State<QuantityScreen> {
       backgroundColor: Color.lerp(Colors.lightBlueAccent, Colors.white, 0.3)!,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         title: Text(
           "Choose Quantity",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
         ),
         actions: [
           IconButton(onPressed: () {}, icon: Icon(Icons.settings)),

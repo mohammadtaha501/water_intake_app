@@ -67,7 +67,8 @@ class _HistoryScreenState extends State<HistoryScreen> {
       backgroundColor: Color.lerp(Colors.lightBlueAccent, Colors.white, 0.3)!,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: const Center(child: Text('History')),
+        centerTitle: true,
+        title: Text('History',),
         elevation: 0,
         actions: [
           IconButton(

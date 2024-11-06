@@ -89,9 +89,6 @@ class _CustomizeReportState extends State<CustomizeReport> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         title: Center(child: Text("Statistics"),),
-          actions: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.settings))
-          ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,

@@ -1,24 +1,17 @@
-import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:audioplayers/audioplayers.dart';
-import 'package:file_picker/file_picker.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
-import 'package:water_intake_app/sevicesAndCustom.dart';
-import 'package:water_intake_app/test.dart';
 
 import 'notificationService.dart';
-import 'screens/reminderSettingScreen.dart';
 import 'screens/splash.dart';
 
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 Future<void> main() async {
-  WidgetsBinding widgetsBinding =  WidgetsFlutterBinding.ensureInitialized();
+  //WidgetsBinding widgetsBinding =
+  WidgetsFlutterBinding.ensureInitialized();
   //FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   tz.initializeTimeZones();
   final now = DateTime.now();
@@ -26,17 +19,8 @@ Future<void> main() async {
   final offsetHours = offset.inHours;
   final formattedOffset = 'Etc/GMT${offsetHours.isNegative ? '+' : '-'}${offsetHours.abs()}';
   final location = tz.getLocation(formattedOffset);
-  print('Custom Location: ${location.name}');
   tz.setLocalLocation(location);
   await NotificationService().init();
-  // Initialize notification settings
-  const AndroidInitializationSettings initializationSettingsAndroid =
-  AndroidInitializationSettings('@mipmap/ic_launcher');
-  final InitializationSettings initializationSettings = InitializationSettings(
-    android: initializationSettingsAndroid,
-    iOS: DarwinInitializationSettings(),
-  );
-  await NotificationService.flutterLocalNotificationsPlugin.initialize(initializationSettings);
   // Check if the app was launched by a notification
   final NotificationAppLaunchDetails? notificationAppLaunchDetails =
   await NotificationService.flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();

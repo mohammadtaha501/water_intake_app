@@ -87,6 +87,8 @@ class _HomeState extends State<Home> {
       backgroundColor: Color.lerp(Colors.lightBlueAccent, Colors.white, 0.3)!,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        centerTitle: true,
+        title: Text('Water Intake Tracker'),
         actions: [
           IconButton(
               onPressed: () {
@@ -110,7 +112,7 @@ class _HomeState extends State<Home> {
                     radius: 150.0,
                     lineWidth: 15.0,
                     percent: progressValue,
-                    center: Text('${double.parse((progressValue*100).toStringAsFixed(2))}', style: TextStyle(fontSize: 24)),
+                    center: Text('${double.parse((progressValue*100).toStringAsFixed(2))} %', style: TextStyle(fontSize: 24)),
                     progressColor: Colors.blueAccent,
                     backgroundColor: Colors.white,
                   ),
@@ -195,7 +197,7 @@ class _HomeState extends State<Home> {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Text("$target", style: TextStyle(fontSize: 14)),
+                                    Text("$target ml", style: TextStyle(fontSize: 14)),
                                     SvgPicture.asset(
                                       'assets/svg/Edit.svg',
                                     ),

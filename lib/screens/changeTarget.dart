@@ -22,7 +22,8 @@ class _Change_TargetState extends State<Change_Target> {
       backgroundColor: Color.lerp(Colors.lightBlueAccent, Colors.white, 0.3)!,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
-        title: Center(child: Text("Change Target")),
+        elevation: 0,
+        title: Text("Change Target"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -54,19 +55,6 @@ class _Change_TargetState extends State<Change_Target> {
                     focusedBorder: InputBorder.none, // No border when focused
                   ),
                 ),
-              ),
-              Row(
-                children: [
-                  Checkbox(
-                    value: isDefaultCup,
-                    onChanged: (value) {
-                      setState(() {
-                        isDefaultCup = value ?? false;
-                      });
-                    },
-                  ),
-                  Text("Set as default cup"),
-                ],
               ),
               SizedBox(height: 10),
               Row(
@@ -119,6 +107,6 @@ class _Change_TargetState extends State<Change_Target> {
           ),
         ),
       ),
-    );;
+    );
   }
 }

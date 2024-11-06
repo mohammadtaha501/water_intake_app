@@ -70,7 +70,7 @@ class _WaterGoalScreenState extends State<WaterGoalScreen> {
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
                               height: 40,
-                              width: 200,
+                              width: 150,
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(16),
@@ -91,7 +91,7 @@ class _WaterGoalScreenState extends State<WaterGoalScreen> {
                           Container(
                             // Enclose both wheels inside a box
                             width: 150,
-                            height: 150,
+                            height: 170,
                             decoration: BoxDecoration(
                               color: Colors.white, // Wheel background color
                               borderRadius: BorderRadius.circular(16),
@@ -106,8 +106,8 @@ class _WaterGoalScreenState extends State<WaterGoalScreen> {
                                     children: [
                                       // Lines around the selected hour
                                       Positioned(
-                                        top: 50,
-                                        bottom: 50,
+                                        top: 60,
+                                        bottom: 60,
                                         child: Container(
                                           width: 50, // Width of the lines container
                                           height: 10, // Adjust the height to fit the item
@@ -155,8 +155,8 @@ class _WaterGoalScreenState extends State<WaterGoalScreen> {
                                     children: [
                                       // Lines around the selected AM/PM
                                       Positioned(
-                                        top: 50,
-                                        bottom: 50,
+                                        top: 60,
+                                        bottom: 60,
                                         child: Container(
                                           width: 40, // Width of the lines container
                                           height: 50, // Adjust the height to fit the item
@@ -218,7 +218,7 @@ class _WaterGoalScreenState extends State<WaterGoalScreen> {
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
                               height: 40,
-                              width: 200,
+                              width: 170,
                               decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(16),

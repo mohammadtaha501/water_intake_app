@@ -57,7 +57,7 @@ class _ReminderSettingState extends State<ReminderSetting> {
         return AlertDialog(
           title: Text('Alert'), // You can customize the title
           content: SizedBox(
-            height: 300,
+            height: 150,
             width: double.maxFinite, // Adjust the width if needed
             child: Center(           // Center the message text
               child: Text(
@@ -693,7 +693,7 @@ class _ReminderSettingState extends State<ReminderSetting> {
                                   startTime: startTime,
                                   endTime: endTime,
                                   intervalDuration: interval == 30?interval: interval *60,
-                                  repeat: 'None',
+                                  repeat: 'Daily',
                                 );
                               }
                               showReminderAlertDialog(context,'reminder set successfully');

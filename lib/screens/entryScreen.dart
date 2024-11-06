@@ -27,7 +27,7 @@ class _EntryScreenState extends State<EntryScreen> {
             right: 20,
             child: ElevatedButton(
               onPressed: () {
-                Navigator.pushReplacement(
+                Navigator.push(
                     context, MaterialPageRoute(builder: (context) => EntryScreen1()));
               },
               style: ElevatedButton.styleFrom(

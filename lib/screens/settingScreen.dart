@@ -15,10 +15,7 @@ class SettingsScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Color.lerp(Colors.lightBlueAccent, Colors.white, 0.3)!,
         elevation: 0,
-        title: Text(
-          "Settings",
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
-        ),
+        title: Text("Settings"),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -39,7 +36,7 @@ class SettingsScreen extends StatelessWidget {
             SectionTitle(title: "Personal Info"),
             GestureDetector(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => GendersScreen(),));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => gender_seeting(),));
               },
               child: SettingCard(
                 icon: Icons.person,
@@ -75,7 +72,7 @@ class SettingsScreen extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () async {
-                const url = 'https://sites.google.com/view/water-intake-privacy-policy/home';
+                const url = 'https://sites.google.com/view/waterintaketrackprivacypolicy/home';
                 if (await canLaunchUrl(Uri.parse(url))) {
                   await launchUrl(
                     Uri.parse(url),
