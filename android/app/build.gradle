@@ -42,10 +42,10 @@ android {
 
     signingConfigs {
         release {
-            keyAlias = keystoreProperties['keyAlias']
-            keyPassword = keystoreProperties['keyPassword']
-            storeFile = keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
-            storePassword = keystoreProperties['storePassword']
+            storeFile file("../app/new-release-key.jks")  // Use the new keystore
+            storePassword "Abc123##"   // Replace with your new keystore password
+            keyAlias "new_release"                      // Must match the alias from the new keystore
+            keyPassword "Abc123##"         // Replace with your new key password
         }
     }
 

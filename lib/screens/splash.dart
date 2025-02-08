@@ -76,8 +76,8 @@ class _SplashScreenState extends State<SplashScreen> {
             )
           ),
           Positioned(
-            left: 50,
-            top: 410,
+            left: 65,
+            top: 440,
               child: AnimatedOpacity(
                 opacity: 1,
                 duration: Duration(seconds: 2),
