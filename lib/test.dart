@@ -14,7 +14,7 @@ class _TimeScreenState extends State<TimeScreen> {
   Future<void> _scheduleNotification( int noticeID) async {
     try {
       final tz.TZDateTime now = tz.TZDateTime.now(tz.local);
-      print('sheduling is going to start');
+      // print('sheduling is going to start');
       await NotificationService.flutterLocalNotificationsPlugin.zonedSchedule(
         noticeID,
         'Reminder',
@@ -35,9 +35,9 @@ class _TimeScreenState extends State<TimeScreen> {
         uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.wallClockTime,
         matchDateTimeComponents: DateTimeComponents.time,
       );
-      print("sheduling complete");
+      // print("sheduling complete");
     } catch (e) {
-      print('Error scheduling notification: $e');
+      // print('Error scheduling notification: $e');
       throw e;
       // Handle error gracefully, maybe log or show user a message
     }

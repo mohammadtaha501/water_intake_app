@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
       await noticeData.open();
       setState(() {});
     } else {
-      print('in not first TIme');
+      // print('in not first TIme');
       await waterDataService.open();
       await noticeData.open();
       await Future.delayed(Duration(seconds: 2));

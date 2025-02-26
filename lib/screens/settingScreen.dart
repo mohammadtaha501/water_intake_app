@@ -79,7 +79,7 @@ class SettingsScreen extends StatelessWidget {
                     mode: LaunchMode.externalApplication,
                   );
                 } else {
-                  print('Could not launch: $url');
+                  // print('Could not launch: $url');
                   throw 'Could not launch $url';
                 }
               },

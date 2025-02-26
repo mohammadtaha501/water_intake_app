@@ -38,7 +38,7 @@ class NoticeData{
         },
       );
     }on MissingPlatformDirectoryException {
-      print("in open exception");
+      // print("in open exception");
       throw UnableToGetDocumentsDirectory();
     }
   }

@@ -93,7 +93,7 @@ class _Change_TargetState extends State<Change_Target> {
                           box.put('target', amountMl);
                           Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen(selectedIndex: 0,),));
                         }catch (e) {
-                          print('$e');
+                          // print('$e');
                           showLottieAlertDialog(context, 'Some thing went wrong');
                         }
                       },

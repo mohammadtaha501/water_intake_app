@@ -14,7 +14,7 @@ if (keystorePropertiesFile.exists()) {
 
 android {
     namespace = "com.waterintake.waterreminder.trackwater.daily"
-    compileSdk = 34
+    compileSdk = 35
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -34,10 +34,10 @@ android {
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         multiDexEnabled true
         minSdk = flutter.minSdkVersion
-        compileSdk = 34
-        targetSdk = 34
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        compileSdk = 35
+        targetSdk = 35
+        versionCode = 2
+        versionName = "1.0.2"
     }
 
     signingConfigs {

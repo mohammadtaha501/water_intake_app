@@ -60,7 +60,7 @@ class NotificationService {
       }
 
       if (status1 != null && !status1) {
-        print('Notification permission not granted');
+        // print('Notification permission not granted');
       }
       var status = await Permission.notification.status;
       await flutterLocalNotificationsPlugin

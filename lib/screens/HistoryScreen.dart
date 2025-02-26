@@ -26,13 +26,13 @@ class _HistoryScreenState extends State<HistoryScreen> {
   List<double> monthlyYvalues = [];
 
   Future<void> processDataForWeek() async {
-    print('weaklyIntervals:$weaklyIntervals');
+    // print('weaklyIntervals:$weaklyIntervals');
     DateTime weekStartDate = _focusedDay.subtract(Duration(days: _focusedDay.weekday - 1));
     List<int> weeklyValuesDouble =await waterDataService.getCumulativeTotalForNextSevenDays(weekStartDate);
     weeklyYvalues = weeklyValuesDouble.map((value) => value.toDouble()).toList();
     maxWeeklyY = (weeklyYvalues.isNotEmpty ? weeklyYvalues.reduce((a, b) => a > b ? a : b) : 0) * 1.2 ;
     weaklyIntervals = (maxWeeklyY/4).floor().toDouble();
-    print("weeakly");
+    // print("weeakly");
   }
   Future<void> processDataForMonth() async {
     DateTime monthStartDate = _focusedDay.subtract(Duration(days: _focusedDay.day - 1));
@@ -47,9 +47,9 @@ class _HistoryScreenState extends State<HistoryScreen> {
     monthlyIntervals = (maxMonthlyY/4).floor().toDouble();
   }
   Future<void> _initializeData() async {
-    print("_initializeData");
+    // print("_initializeData");
     await processDataForWeek();
-    print("_initializeData2");
+    // print("_initializeData2");
     await processDataForMonth();
     setState(() { });
   }
@@ -57,7 +57,7 @@ class _HistoryScreenState extends State<HistoryScreen> {
   @override
   void initState() {
     super.initState();
-    print("initstate");
+    // print("initstate");
     _initializeData();
   }
 

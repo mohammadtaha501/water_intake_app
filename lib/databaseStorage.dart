@@ -25,7 +25,7 @@ class datastorage{
     if (_db != null) return;
 
     try {
-      print("in open");
+      // print("in open");
       final docsPath=await getApplicationDocumentsDirectory();
       final dbPath=join(docsPath.path,"water_intake.db");
       _db = await openDatabase(dbPath);
@@ -39,7 +39,7 @@ class datastorage{
     )
     ''');
     }on MissingPlatformDirectoryException {
-      print("in open exception");
+      // print("in open exception");
       throw UnableToGetDocumentsDirectory();
     }
   }
@@ -120,7 +120,7 @@ class datastorage{
         }
       }
     } catch (e) {
-      print('Error fetching cumulative totals: $e');
+      // print('Error fetching cumulative totals: $e');
       throw Exception("Error fetching cumulative totals");
     }
 
